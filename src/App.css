@@ -19,6 +19,54 @@ nav {
 .large {
   display: none;
 }
+.animations {
+  display: flex;
+  justify-content: space-around;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background: violet;
+}
+.my-animation {
+  animation-name: color-slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+.drawer {
+  position: fixed;
+  top: 50px;
+  width:  100px;
+  right: 0;
+  background: black;
+  color: white;
+  height: calc(100px);
+  transition: 1s;
+}
+.open {
+  width: 100px;
+}
+@keyframes color-slide {
+  0% {
+    background-color: red;
+    font-size: 10px;
+    opacity: 1;
+  }
+  50% {
+    background-color: green;
+    font-size: 15px;
+  }
+  100% {
+    background-color: blue;
+    font-size: 20px;
+    opacity: 0.3;
+  }
+
+}
+
 @media (min-width: 650px){
   .large {
     display: initial;
